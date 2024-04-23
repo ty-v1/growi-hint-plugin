@@ -1,6 +1,6 @@
+import 'remark-hint/test/style.css';
 // @ts-ignore
 import remarkHint from 'remark-hint';
-
 
 declare const growiFacade: any;
 
