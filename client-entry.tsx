@@ -18,6 +18,14 @@ const activate = (): void => {
 
     return options;
   };
+
+  optionsGenerators.customGeneratePreviewOptions = (...args: any[]) => {
+    // @ts-ignore
+    const options = optionsGenerators.generatePreviewOptions(...args);
+    options.remarkPlugins.push(remarkHint)
+
+    return options;
+  };
 };
 
 if ((window as any).pluginActivators == null) {
